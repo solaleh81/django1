@@ -1,0 +1,8 @@
+<ul>
+    {% for food in foods %}
+    <a href="{% url 'foods:detail' food.id %}">
+        <li>{{food.name}}</li>
+    </a>
+
+    {% endfor %}
+</ul>
