@@ -8,8 +8,8 @@ def food_list(request):
     return render(request, "foods/list.html", context=context)
 
 
-def food_detail(request, id):
+def food_detail(request, slug):
 
-    food = Food.objects.filter(id=id)
+    food = Food.objects.filter(slug=slug)
     context = {"food": food}
     return render(request, "foods/detail.html", context=context)

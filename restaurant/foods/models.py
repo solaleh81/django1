@@ -10,6 +10,7 @@ class Food(models.Model):
     time = models.IntegerField(_('زمان لازم'))
     put_date = models.DateField(_('تاریخ انتشار'), auto_now=False, auto_now_add=True)
     photo = models.ImageField(upload_to='foods/')
+    slug = models.SlugField(unique=True)
 
 
     def __str__(self):

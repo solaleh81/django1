@@ -1,6 +1,6 @@
 <ul>
     {% for food in foods %}
-    <a href="{% url 'foods:detail' food.id %}">
+    <a href="{% url 'foods:detail' food.slug %}">
         <li>{{food.name}}</li>
     </a>
 

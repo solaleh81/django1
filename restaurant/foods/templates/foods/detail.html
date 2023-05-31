@@ -1,3 +1,4 @@
+{% block content %}
 <h1>
     detail
 </h1>
@@ -5,5 +6,7 @@
     <li>{{food}}</li>
     <li>{{food.price}}</li>
     <li>{{food.rate}}</li>
-
+    <li>{{food.description}}</li>
+    {% endfor %}
 </ul>
+{% endblock %}
