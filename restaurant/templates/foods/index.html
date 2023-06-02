@@ -20,13 +20,13 @@
 	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static " css/bootstrap.min.css" %}">
 	<!-- Site CSS -->
-	<link rel="stylesheet" href="{% static 'css/style.css %}">
+	<link rel="stylesheet" href="{% static " css/style.css" %}">
 	<!-- Responsive CSS -->
-	<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+	<link rel="stylesheet" href="{% static " css/responsive.css" %}">
 	<!-- Custom CSS -->
-	<link rel="stylesheet" href="{% static 'css/custom.css' %}">
+	<link rel="stylesheet" href="{% static " css/custom.css" %}">
 
 	<!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -80,7 +80,7 @@
 	<div id="slides" class="cover-slides">
 		<ul class="slides-container">
 			<li class="text-center">
-				<img src="images/slider-01.jpg" alt="">
+				<img src="{% static 'images/slider-01.jpg' %}" alt="">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
@@ -191,104 +191,18 @@
 			</div>
 
 			<div class="row special-list">
+				{% for food in foods %}
 				<div class="col-lg-4 col-md-6 special-grid drinks">
 					<div class="gallery-single fix">
 						<img src="images/img-01.jpg" class="img-fluid" alt="Image">
 						<div class="why-text">
-							<h4>Special Drinks 1</h4>
-							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $7.79</h5>
+							<h4>{{food.name}}</h4>
+							<p>{{food.description}}</p>
+							<h5>{{food.price}}</h5>
 						</div>
 					</div>
 				</div>
-
-				<div class="col-lg-4 col-md-6 special-grid drinks">
-					<div class="gallery-single fix">
-						<img src="images/img-02.jpg" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Special Drinks 2</h4>
-							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $9.79</h5>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 special-grid drinks">
-					<div class="gallery-single fix">
-						<img src="images/img-03.jpg" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Special Drinks 3</h4>
-							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $10.79</h5>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 special-grid lunch">
-					<div class="gallery-single fix">
-						<img src="images/img-04.jpg" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Special Lunch 1</h4>
-							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $15.79</h5>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 special-grid lunch">
-					<div class="gallery-single fix">
-						<img src="images/img-05.jpg" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Special Lunch 2</h4>
-							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $18.79</h5>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 special-grid lunch">
-					<div class="gallery-single fix">
-						<img src="images/img-06.jpg" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Special Lunch 3</h4>
-							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $20.79</h5>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 special-grid dinner">
-					<div class="gallery-single fix">
-						<img src="images/img-07.jpg" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Special Dinner 1</h4>
-							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $25.79</h5>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 special-grid dinner">
-					<div class="gallery-single fix">
-						<img src="images/img-08.jpg" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Special Dinner 2</h4>
-							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $22.79</h5>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 special-grid dinner">
-					<div class="gallery-single fix">
-						<img src="images/img-09.jpg" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Special Dinner 3</h4>
-							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $24.79</h5>
-						</div>
-					</div>
-				</div>
+				{% endfor %}
 
 			</div>
 		</div>
@@ -515,17 +429,17 @@
 	<a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
 
 	<!-- ALL JS FILES -->
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/popper.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+	<script src="{% static " js/jquery-3.2.1.min.js" %}"></script>
+	<script src="{% static " js/popper.min.js" %}"></script>
+	<script src="{% static " js/bootstrap.min.js" %}"></script>
 	<!-- ALL PLUGINS -->
-	<script src="js/jquery.superslides.min.js"></script>
-	<script src="js/images-loded.min.js"></script>
-	<script src="js/isotope.min.js"></script>
-	<script src="js/baguetteBox.min.js"></script>
-	<script src="js/form-validator.min.js"></script>
-	<script src="js/contact-form-script.js"></script>
-	<script src="js/custom.js"></script>
+	<script src="{% static " js/jquery.superslides.min.js" %}"></script>
+	<script src="{% static " js/images-loded.min.js" %}"></script>
+	<script src="{% static " js/isotope.min.js" %}"></script>
+	<script src="{% static " js/baguetteBox.min.js" %}"></script>
+	<script src="{% static " js/form-validator.min.js" %}"></script>
+	<script src="{% static " js/contact-form-script.js" %}"></script>
+	<script src="{% static " js/custom.js" %}"></script>
 </body>
 
 </html>
