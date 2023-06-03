@@ -9,3 +9,5 @@ urlpatterns = [
     path("<slug:slug>/", views.food_detail, name="detail"),
    
 ]
+
+

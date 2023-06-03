@@ -5,7 +5,7 @@ from .models import Food
 def food_list(request):
     food_list = Food.objects.all()
     context = {"foods" : food_list}
-    return render(request, "index.html", context=context)
+    return render(request, "foods/list.html", context=context)
 
 
 def food_detail(request, slug):
